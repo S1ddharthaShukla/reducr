@@ -7,12 +7,23 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## How to Use
 
-## Learn more
+  * ***Create a short link:***
+  Send a POST request to /api/links with a JSON body:
+  ```sh
+  {
+    curl -X POST -H "Content-Type: application/json" -d '{"long_url": "https://www.google.com"}' http://localhost:4000/api/links  }
+  ```
+  
+  You should receive a response with the shortened URL:
+  ```json
+  {
+      "long_url": "https://www.google.com",
+      "short_id": "1", // Or "b", "c", etc. depending on the counter
+      "short_url": "http://localhost:4000/1"
+  }
+  ```
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+  * Access the shortened URL:
+  Open ```http://localhost:4000/YOUR_SHORT_ID``` (e.g., ```http://localhost:4000/1```) in your browser. It should redirect you to the original ```long_url```.
