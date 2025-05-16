@@ -9,7 +9,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## How to Use
 
-  * ***Create a short link:***
+  * **Create a short link:**
   Send a POST request to /api/links with a JSON body:
   ```sh
   {
@@ -25,5 +25,5 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
   }
   ```
 
-  * Access the shortened URL:
+  * **Access the shortened URL:**
   Open ```http://localhost:4000/YOUR_SHORT_ID``` (e.g., ```http://localhost:4000/1```) in your browser. It should redirect you to the original ```long_url```.
