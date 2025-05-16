@@ -9,6 +9,8 @@ This is a CLI based tool that leverages genservers as a in memory database. It i
 
 ## How to Use
 
+  * Use a terminal multiplexer like tmux or screen to run the server and test the API at the same time. Or you can use two terminal windows.
+
   * **Create a short link:**
   Send a POST request to /api/links with a JSON body:
   ```sh
