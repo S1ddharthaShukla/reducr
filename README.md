@@ -1,4 +1,4 @@
-# Shortyy
+# Reducr
 
 To start your Phoenix server:
 
