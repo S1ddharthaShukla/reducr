@@ -5,7 +5,7 @@ To start your Phoenix server:
   * Run `mix setup` to install and setup dependencies
   * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+This is a CLI based tool that leverages genservers as a in memory database. It is a simple URL shortener that allows you to create short links for long URLs. The short links are generated using a counter that increments with each new link created. The short links are stored in memory and are not persistent, meaning they will be lost when the server is restarted.
 
 ## How to Use
 
@@ -13,7 +13,8 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
   Send a POST request to /api/links with a JSON body:
   ```sh
   {
-    curl -X POST -H "Content-Type: application/json" -d '{"long_url": "https://www.google.com"}' http://localhost:4000/api/links  }
+    curl -X POST -H "Content-Type: application/json" -d '{"long_url": "https://www.google.com"}' http://localhost:4000/api/links  
+  }
   ```
   
   You should receive a response with the shortened URL:
